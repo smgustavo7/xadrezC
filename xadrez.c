@@ -4,7 +4,7 @@
 
     //Área para adicionar as variáveis
 
-        int rainha, torre = 1, bispo = 1;
+        int rainha, cavalo = 0, torre = 1, bispo = 1;
         
     //Área para estrutura de repetição 'For' para simular a movimentação da peça de xadrez - Rainha
 
@@ -28,7 +28,18 @@
             printf("BISPO - Cima Direita\n");
             bispo++;
         } while (bispo <= 5);
+
+    //Área para loop aninhado 'While' e 'For' para simular a movimentação da peça de xadrez - Cavalo
         
-        
+        while(cavalo < 1){
+
+            for(int i = 0; i < 2; i++){
+
+                printf("CAVALO - Baixo\n");
+            }
+            cavalo++;
+            printf("CAVALO - Esquerda\n");
+        }
+
         return 0;
     }
