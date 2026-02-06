@@ -1,45 +1,53 @@
 #include <stdio.h>
 
+//Área para a implementação da recursividade das peças de xadrez - Rainha, Torre e Bispo
+
+    void moverrainha(int RAINHA){
+        if (RAINHA > 0){
+            printf("RAINHA anda uma casa para esquerda\n");
+            moverrainha (RAINHA - 1);
+        }
+    }
+
+    void movertorre(int TORRE){
+        if (TORRE > 0){
+            printf("TORRE anda uma casa para a direita\n");
+            movertorre (TORRE - 1);
+        }
+    }
+
+    void moverbispo(int BISPO){
+        if (BISPO > 0){
+            printf("BISPO anda uma casa para cima\n");
+            printf("BISPO anda uma casa para a direita\n");
+            moverbispo (BISPO - 1);
+        }
+    }
+
+
     int main(){
 
-    //Área para adicionar as variáveis
+//Área para adicionar o valor das recursividades 
 
-        int rainha, cavalo = 0, torre = 1, bispo = 1;
+        moverrainha(8);
+        movertorre(5);
+        moverbispo(5);
+
+//Área para variavel da peça de xadrez Cavalo
+
+        int cavalo = 0;
         
-    //Área para estrutura de repetição 'For' para simular a movimentação da peça de xadrez - Rainha
+//Área para loop aninhado para a peça de xadrez Cavalo
 
-        for (rainha = 1; rainha <= 8; rainha++)
-        {
-            printf("RAINHA - Esquerda\n");
-        }
-
-    //Área para estrutura de repetição 'While' para simular a movimentação da peça de xadrez - Torre
-
-        while (torre <= 5)
-        {
-            printf("TORRE - Direita\n");
-            torre++;
-        }
-
-    //Área para estrutura de repetição 'Do-while' para simular a movimentação da peça de xadrez - Bispo
-
-        do
-        {
-            printf("BISPO - Cima Direita\n");
-            bispo++;
-        } while (bispo <= 5);
-
-    //Área para loop aninhado 'While' e 'For' para simular a movimentação da peça de xadrez - Cavalo
-        
         while(cavalo < 1){
 
             for(int i = 0; i < 2; i++){
 
-                printf("CAVALO - Baixo\n");
+                printf("CAVALO anda uma casa para cima\n");
             }
             cavalo++;
-            printf("CAVALO - Esquerda\n");
+            printf("CAVALO anda uma casa para a direita\n");
         }
-
+    
         return 0;
     }
